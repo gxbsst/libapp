@@ -48,3 +48,4 @@ group :test do
 end
 gem 'strong_parameters'
 gem 'email_validator'
+gem 'active_attr'

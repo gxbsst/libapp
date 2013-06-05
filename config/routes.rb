@@ -3,4 +3,5 @@ Libapp::Application.routes.draw do
   resources :readers
   root to: 'home#index'
   get '/login', to: "sessions#new", as: 'sessions'
+  post '/login', to: "sessions#create"
 end

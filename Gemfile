@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.12.2'
   gem 'spork', '~> 0.9.2'
   gem 'shoulda-matchers'
+  gem 'pry'
 end
 
 group :test do
@@ -49,3 +50,4 @@ end
 gem 'strong_parameters'
 gem 'email_validator'
 gem 'active_attr'
+gem 'bcrypt-ruby', '~> 3.0.0'

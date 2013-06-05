@@ -4,14 +4,14 @@ describe 'Login' do
 
   describe "#authenticate" do
     before :each do
-      Reader.create( id: 10, email: "bob@mail.com", password: "pass", password_confirmation: 'pass')
+      Reader.create( id: 1, email: "bob@mail.com", password: "pass", password_confirmation: 'pass')
     end
     it "returns reader id if credentials are valid" do
       #login = Reader.new( id: 10, email: "bob@mail.com", password: "pass", password_confirmation: 'pass')
       #login.save
       login = Login.new( email: 'bob@mail.com', password: 'pass')
       # TODO
-      expect(login.authenticate).to eq(nil)
+      expect(login.authenticate).to eq(1)
     end
     it "returns nil if email is not valid" do
       login = Login.new( email: 'rem@mail.com', password: 'pass')

@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605142728) do
+ActiveRecord::Schema.define(:version => 20130605151813) do
 
   create_table "readers", :force => true do |t|
     t.string "email"
-    t.string "password"
     t.string "password_digest"
   end
 

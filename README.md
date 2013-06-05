@@ -1,0 +1,4 @@
+libapp
+======
+
+BDD in Rails

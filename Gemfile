@@ -39,6 +39,7 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails', '~> 2.12.2'
   gem 'spork', '~> 0.9.2'
+  gem 'shoulda-matchers'
 end
 
 group :test do
@@ -46,3 +47,4 @@ group :test do
   gem 'database_cleaner', '~> 0.9.1'
 end
 gem 'strong_parameters'
+gem 'email_validator'

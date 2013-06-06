@@ -6,6 +6,7 @@ class ReadersController < ApplicationController
  def create
    @reader = Reader.new(reader_params)
    if @reader.save
+     session[:reader_id] = @reader.id
      redirect_to root_url, notice: "Reader register"
    else
      flash.now[:error] = "something went wrong"

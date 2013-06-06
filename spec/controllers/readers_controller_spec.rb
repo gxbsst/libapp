@@ -43,6 +43,13 @@ describe ReadersController do
       post :create
     end
     context "when save message return true" do
+      let(:params) do
+         {
+        "email" => "email@email.com",
+        "password" => "pass",
+        "password_confirmation" => "pass"
+        }
+      end
       before :each do
         reader.stub(:save).and_return(true)
       end
@@ -53,6 +60,10 @@ describe ReadersController do
       it "assigns a success flash message" do
         post :create
         expect(flash[:notice]).not_to be_nil
+      end
+      it "logs in reader" do
+        post :create, reader: params
+        expect(session[:reader_id]).to eq(reader.id)
       end
     end
 

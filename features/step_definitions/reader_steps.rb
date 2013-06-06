@@ -68,3 +68,19 @@ Then(/^I should be logged in as "(.*?)" reader$/) do |email|
  expect(page).to have_content("Welcome, #{email}")
 end
 
+Given(/^reader with "(.*?)" exists $/) do |email|
+  Reader.create( email: email, password: "pass", password_confirmation: 'pass' )
+end
+
+When(/^I go to logout page$/) do
+  visit("/logout")
+end
+
+Then(/^I should be logged out$/) do
+  expect(page).not_to have_content("Welcome")
+  expect(page).to have_content("Register")
+end
+
+Given(/^I fill the login form with valid data for "(.*?)" reader$/) do |email|
+end
+
